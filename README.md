@@ -78,3 +78,17 @@ or
 `git commit -m "Remove duplicated directory"`  
 `git push origin <your-git-branch>` (typically 'master', but not always)
   
+## 錯誤：執行 git pull 時遇到'The following untracked working tree files would be overwritten by merge'
+1. 解法1：捨棄檔案  
+   `git clean -d -f .`  
+2. 解法2：暫存檔案  
+   ```
+   git add *
+   git stash
+   git pull
+   ```
+  
+## 錯誤：執行 git pull 時遇到'fatal: git-write-tree: error building trees'
+`git reset --mixed`  
+
+  
